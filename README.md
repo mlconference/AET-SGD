@@ -5,7 +5,7 @@ This repo contains the implementation of ET-SGD (Event-triggered SGD) and AET-SG
 
 <em>In order to run the ET-SGD, you need to execute the following commands:</em>
 
-##### CUDA_VISIBLE_DEVICES=0,1 python3 main_SGD_event.py --num-clients 5  --dataset 0 --eta0 0.01 --num-edge 2 --log-interval 10  --eta0 0.01 --batch-size 1 --event-name EVENT
+##### ```CUDA_VISIBLE_DEVICES=0,1 python3 main_SGD_event.py --num-clients 5  --dataset 0 --eta0 0.01 --num-edge 2 --log-interval 10  --eta0 0.01 --batch-size 1 --event-name EVENT```
 
 Here, main_SGD_event.py is the Pytorch implementation of AET-SGD.
 
@@ -26,7 +26,7 @@ Note that ```CUDA_VISIBLE_DEVICES=0,1``` indicates which GPU cards you want to r
 
 <em> In order to run the experiment with AET-SGD, you can execute the following commands:</em>
 
-##### CUDA_VISIBLE_DEVICES=0,1 python3 main_SGD.py --num-clients 5 --dataset 0 --eta0 0.01 --num-edge 2 --log-interval 10 --batch-size 10 --need-constant-ss 1 --constant-ss 10
+##### ```CUDA_VISIBLE_DEVICES=0,1 python3 main_SGD.py --num-clients 5 --dataset 0 --eta0 0.01 --num-edge 2 --log-interval 10 --batch-size 10 --need-constant-ss 1 --constant-ss 10```
 
 Here, AET-SGD with local SGD runs with a constant local SGD (10 SGD iterations per round) and,
 
@@ -37,7 +37,7 @@ Here, AET-SGD with local SGD runs with a constant local SGD (10 SGD iterations p
 
 <em>Finally, our AET-SGD with linear increasing sample sequences can be executed by </em>
 
-##### CUDA_VISIBLE_DEVICES=0,1 python3 main_SGD.py --num-clients 5  --dataset 0 --eta0 0.01 --num-edge 2 --log-interval 10 --batch-size 1
+##### ```CUDA_VISIBLE_DEVICES=0,1 python3 main_SGD.py --num-clients 5  --dataset 0 --eta0 0.01 --num-edge 2 --log-interval 10 --batch-size 1```
 
 The default linear increasing sample sequence is ```s_i = 10i```, where i is the current communication round.
 
