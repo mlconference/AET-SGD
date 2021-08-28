@@ -19,7 +19,7 @@ Here, main_SGD_event.py is the Pytorch implementation of AET-SGD.
 
 ```--batch-size 1``` is the size of mini-batch size.
 
-```--event-name EVENT``` is the name of event-triggered SGD.
+```--event-name EVENT``` is the name of event-triggered SGD. The default event is ```local SGD```.
 
 Note that ```CUDA_VISIBLE_DEVICES=0,1``` indicates which GPU cards you want to run the experiments on.
 
