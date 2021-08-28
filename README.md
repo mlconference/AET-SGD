@@ -1,6 +1,6 @@
 <h1>AET-SGD implementation using Pytorch</h1>
 
-This repo contains the implementation of ET-SGD (Event-triggered SGD) and AET-SGD (Asynchronous AET-SGD). The main difference here is our AET-SGD deploys the linear increasing sample sequence for p2p network topology while ET-SGD deploys the heuristic event threshold.
+This repo contains the implementation of ET-SGD (Event-triggered SGD) and AET-SGD (A new Asynchronous ET-SGD). The main difference here is our AET-SGD deploys the linear increasing sample sequence for p2p network topology while ET-SGD deploys the heuristic event threshold.
 
 
 <em>In order to run the ET-SGD, you need to execute the following commands:</em>
