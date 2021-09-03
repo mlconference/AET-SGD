@@ -892,7 +892,11 @@ def train(args, model, device, train_loader, optimizer, epoch, client_id,
     # Uncommenting any of the `time.sleep`s makes it work consistently again.
     # "Indicate that no more data will be put on this queue by the
     # current process." --Documentation
-    time.sleep(0.001 * 1) # 3ms
+    # time.sleep(0.001 * 1) # 3ms
+    # in case we need to simulate the stragger nodes
+    # increase the range of randint(a.b)
+    randNumber = rand.randint(1, 15) # 0.1ms to 1.5ms
+    time.sleep( float(randNumber)/ 1000)
     # ~issue35844
 
     logger.debug("Client {} : Train Epoch {}, Set Gradient norm".format(client_id, epoch))
@@ -1579,14 +1583,16 @@ def main_function(thread_name="Thread_0", thread_id=1, args=None, client_id=0, i
         # tricky
         # this is the most fucking code I've written...
         sleep_base = 1.0 / 1000.0
-        lowest_round = get_round_method(client_id=client_id, current_epoch=epoch)
-        fraction_dummy = 1.0
-        try:
-            fraction_dummy = float(epoch) / float(lowest_round)
-        except Exception as expt_dummp:
-            fraction_dummy = 1.51111111111 #### dummy value.
+        # lowest_round = get_round_method(client_id=client_id, current_epoch=epoch)
+        # fraction_dummy = 1.0
+        # try:
+        #     fraction_dummy = float(epoch) / float(lowest_round)
+        # except Exception as expt_dummp:
+        #     fraction_dummy = 1.51111111111 #### dummy value.
 
-        time.sleep(sleep_base * fraction_dummy)
+        randNumber = rand.randint(1, 15) # 0.1ms to 1.5ms
+        # time.sleep( float(randNumber)/ 1000)
+        time.sleep(sleep_base * float(randNumber))
         # ~tricky
 
 
