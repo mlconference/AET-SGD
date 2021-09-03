@@ -716,7 +716,7 @@ def train(args, model, device, train_loader, optimizer, epoch, client_id, intern
     # "Indicate that no more data will be put on this queue by the
     # current process." --Documentation
     # time.sleep(0.001 * 1) # 3ms
-    randNumber = rand.randint(1, 15) # 0.1ms to 1.5ms
+    randNumber = rand.randint(1, 10) # 0.1ms to 1.0ms
     time.sleep( float(randNumber)/ 1000)
     # ~issue35844
 

@@ -895,7 +895,7 @@ def train(args, model, device, train_loader, optimizer, epoch, client_id,
     # time.sleep(0.001 * 1) # 3ms
     # in case we need to simulate the stragger nodes
     # increase the range of randint(a.b)
-    randNumber = rand.randint(1, 15) # 0.1ms to 1.5ms
+    randNumber = rand.randint(1, 10) # 0.1ms to 1.0ms
     time.sleep( float(randNumber)/ 1000)
     # ~issue35844
 
